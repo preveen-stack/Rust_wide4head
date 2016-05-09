@@ -1,0 +1,7 @@
+[package]
+name = "nalgebra-test"
+version = "0.1.0"
+authors = ["preveen p <dxb1230@gmail.com>"]
+
+[dependencies]
+nalgebra = "*"

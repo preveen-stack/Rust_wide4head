@@ -1,0 +1,12 @@
+//youtube video
+
+Rust 
+	Systems Programming Language
+	near C performance
+	Statially prevents segfaults
+	Guarantees thread safety
+	Zero cost abstractions
+	Lots of functional programming features;
+
+:q
+

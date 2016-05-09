@@ -1,0 +1,6 @@
+[package]
+name = "deref-coercions"
+version = "0.1.0"
+authors = ["preveen p <dxb1230@gmail.com>"]
+
+[dependencies]

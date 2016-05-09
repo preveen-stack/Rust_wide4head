@@ -1,0 +1,9 @@
+[package]
+name = "mysql_test"
+version = "0.1.0"
+authors = ["preveen p <dxb1230@gmail.com>"]
+
+[dependencies]
+mysql = "*"
+time = "0.1.35"
+chrono = "0.2.22"

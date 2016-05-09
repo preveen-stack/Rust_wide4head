@@ -1,0 +1,27 @@
+extern crate time;
+extern crate chrono;
+extern crate mysql;
+use mysql as my;
+use time::Timespec;
+use chrono::*;
+
+#[derive(Debug, PartialEq, Eq)]
+struct RawData {
+	unit_identifier : String,
+	recd_datetime : DateTime,
+	raw_data : String,	
+}
+fn main() {
+	let pool = my::Pool::new("mysql://seroot:admin@www.sesolarpumps.com:3306").unwrap();
+	let selected_raw_data : Vec<RawData> = pool.prep_exec("select unit_identifier, current_datetime, raw_data from se_data_monitor.unit_in_data  order by id desc limit 12", ()).map(|result| {
+	result.map(|x| x.unwrap()).map(|row| {
+		let (unit_identifier, recd_datetime, raw_data) = my::from_row(row);
+	RawData {
+		unit_identifier : unit_identifier,
+		recd_datetime : recd_datetime,
+		raw_data : raw_data,	
+	}
+	}).collect()
+}).unwrap();
+println!("Yay");
+}

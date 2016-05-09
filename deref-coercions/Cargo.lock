@@ -1,0 +1,4 @@
+[root]
+name = "deref-coercions"
+version = "0.1.0"
+

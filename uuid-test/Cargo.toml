@@ -1,0 +1,8 @@
+[package]
+name = "uuid-test"
+version = "0.1.0"
+authors = ["preveen p <dxb1230@gmail.com>"]
+
+[dependencies.uuid]
+version = "~0.2.0"
+features = ["v4"]
